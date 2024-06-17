@@ -1,0 +1,471 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Below is to make background disapper and only show the image */
+.container
+{
+    position:relative;
+}
+
+.header {
+    width: 100%;
+    height: 800px;
+    background-image: url('img/image_1.jpg'); /* Adjust the path if necessary */
+    background-size: cover; /* Ensures the image covers the entire div */
+    background-position: center; /* Centers the image */
+}
+
+.header .header_bar {
+    width: 100%;
+    height: 100px;
+    background-color: rgba(0, 0, 0, 0.333);
+    display: flex;
+    justify-content: flex-end; /* Aligns items to the right */
+    align-items: center; /* Centers items vertically */
+    padding-right: 20px; /* Adds some padding to the right */
+}
+
+.header .header_nav a {
+    color: white; /* Sets the text color to white */
+    text-decoration: none; /* Removes the underline from the links */
+    font-size: 15pt;
+    padding: 10px; /* Adds some padding around the links for better spacing */
+    display: inline-block; /* Ensures the padding is applied properly */
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.header .header_bar .header_logo
+{
+    
+    color:white;
+    position:absolute;
+    left:10%;
+}
+
+.header .header_text {
+    color: white; /* Sets the text color to white */
+    font-size: 30pt; /* Adjusts the font size of the text */
+    flex-grow: 1; /* Allows the text to take up remaining space */
+    padding-left: 20px; /* Adds padding to the left */
+} 
+
+.header .header_ctn {
+    width: 620px;
+    height: 100px;
+    color: rgba(255,255,255,1.00);
+    text-align: center;
+    position: relative;
+    font-size: 50pt;
+    /* border: 2px solid; */
+    top: 50%;
+    left: 29%;
+    padding-top:150px;
+}
+
+.header .header_bar .header_container .header_logo
+{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 55px;
+    font-family:fantasy;
+    margin-top: -11px;
+    color:rgba(255, 255, 255, 0.943);
+    text-align:center;
+    margin-left:-80px;
+}
+
+.header .header_bar .header_container .header_logo img {
+    margin-right: 20px; /* Adjust the space between the logo and text */
+}
+
+.header .header_nav a:hover {
+    font-weight: bold;
+}
+
+.header .text {
+    width: 500px;
+    height: 600px;
+    text-align: justify;
+    color: rgba(255, 255, 255, 1.00);
+    font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
+    font-size:15pt;
+    position: absolute; /* Position the text absolutely */
+    top: 300px; /* Align the text to the top */
+    right: 870px; /* Align the text to the right */
+    padding: 240px; /* Add padding for spacing */
+    white-space: nowrap; /* Prevent wrapping */
+}
+
+.body
+{
+    width: 100%;
+    height: 800px;
+    background-image:url("img/image_2.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.body .body_back .box_1 fieldset
+{
+    border: 5px solid #000;
+    width:550px;
+    text-align:justify;
+    position: absolute;
+    top:880px;
+    left:130px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size:15pt;
+}
+
+.body .body_back .box_2 fieldset
+{
+    border: 5px solid #000;
+    width:550px;
+    text-align:justify;
+    position: absolute;
+    top:880px;
+    left:850px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size:15pt;
+}
+
+.body .image_box1
+{
+    display: none;
+    position: absolute;
+    top: 950px;
+    left: 690px;
+    z-index: 10;
+    width: 500px; /* Adjust as needed */
+    height: 500px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.body .image_box2
+{
+    display: none;
+    position: absolute;
+    top: 1100px;
+    left: 490px;
+    z-index: 10;
+    width: 500px; /* Adjust as needed */
+    height: 500px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.body .box_1:hover .image_box1
+{
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.body .box_2:hover .image_box2
+{
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.body .box_1:hover ~ * {
+    filter: blur(5px);
+    pointer-events: none;
+}
+
+.body .box_2:hover ~ * {
+    filter: blur(5px);
+    pointer-events: none;
+}
+
+.body .box_1:hover {
+    filter: none;
+    pointer-events: auto;
+}
+
+.body .box_2:hover {
+    filter: none;
+    pointer-events: auto;
+}
+
+.body .body_back .tableForm table
+{
+    width: 1100px;
+    position: absolute;
+    top: 1150px;
+    left: 210px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size:15pt;
+}
+
+/* Add Color to each row and column */
+.tableForm table th.header {
+    background-color: lightblue;
+    color: black;
+}
+
+.tableForm table tr.good {
+    background-color: #dff0d8;
+}
+
+.tableForm table tr.moderate {
+    background-color: #fcf8e3;
+}
+
+.tableForm table tr.sensitive {
+    background-color:rgb(247, 223, 179);
+    /* background-color: #f2dede; */
+}
+
+.tableForm table tr.unhealthy {
+    background-color: #f2b8b6;
+}
+
+.tableForm table tr.very-unhealthy {
+    background-color: rgb(218, 182, 242);
+}
+
+.tableForm table tr.hazardous {
+    background-color: #ebcccc;
+}
+/* End of add color to row and column */
+
+.body2
+{
+    width: 100%;
+    height: 800px;
+    background-image:url("img/image_7.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.body2 p
+{
+    position:absolute;
+    top:1700px;
+    left:465px;
+}
+
+/* Added Code */
+.tables-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+    position: absolute;
+    top: 1790px;
+    width:90%;
+    left:58px;
+}
+
+.aqi-table {
+    border-collapse: collapse;
+    width: 45%;
+    margin: 0 auto;
+}
+
+.aqi-table caption {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.aqi-table th, .aqi-table td {
+    border: 3px solid #ddd;
+    padding: 8px;
+    text-align: left;
+    color:white;
+    font-size:16pt;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.aqi-table th {
+    background-color: #f2f2f2;
+    color: black;
+}
+
+.aqi-table tr:hover {
+    background-color: #030101;
+    cursor: pointer;
+    font-weight:bold;
+}
+
+.aqi-level {
+    font-weight: bold;
+    text-align: center;
+    color: white;
+}
+
+.body3
+{
+    width: 100%;
+    height: 800px;
+    background-image:url("img/image_5.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.body3 h1
+{
+    position:absolute;
+    top: 2450px;
+    left: 50px; 
+    font-size:40px;
+    text-decoration: underline;
+}
+
+.body3 a {
+    position: absolute;
+    top: 2530px;
+    left: 50px;
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Add transition effect */
+}
+
+.body3 a img {
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Add transition effect */
+}
+
+.body3 .text-box {
+    display: none;
+    position: absolute;
+    top: 2600px; /* Adjust as necessary */
+    left: 30px; /* Adjust as necessary */
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.body3 a:hover img{
+    transform: scale(1.1); /* Scale up the image */
+    opacity: 0.8; /* Add some transparency */
+}
+
+
+.body3 a:hover + .text-box {
+    display: block; /* Show the text box on hover */
+}
+
+/* Adjust the text position in body 3 */
+.body3 .text1
+{
+    position:absolute;
+    top: 2530px;
+    left:870px;
+}
+
+.body3 .text2
+{
+    position:absolute;
+    top: 2950px;
+    left:50px;
+}
+
+.body4
+{
+    width: 100%;
+    height: 800px;
+    background-image:url("img/image_8.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.body4 .body4_image
+{
+    position:absolute;
+    top:3200px;
+    left:819px;
+}
+
+.body4 .body4_title
+{
+    position:absolute;
+    top:3250px;
+    left:50px;
+
+}
+
+.body4 .body4_title p
+{
+    width:700px;
+
+}
+
+.body4 .body4_title h1
+{
+    color:white;
+}
+
+/* Below is the selector */
+.body4 .selector-container {
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgb(149, 149, 149);
+    position: absolute;
+    top:3500px;
+    left:50px;
+}
+
+.body4 .selector-container label {
+    font-size: 18px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.body4 .selector-container select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.body4 .selector-container select:focus {
+    border-color: #007BFF;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
+    outline: none;
+}
+/* End of selector */
+
+
+/* Footer section */
+.footer {
+    width: 100%;
+    height: 100px;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: relative;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.footer_content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer_nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 14pt;
+    padding: 10px;
+}
+
+.footer_nav a:hover {
+    font-weight: bold;
+}

@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Air Pollution</title>
+    <link href="styles.css" rel="stylesheet" type="text/css">
+    <script>
+        function navigateToWebsite() {
+            var selectBox = document.getElementById("stateSelector");
+            var selectedValue = selectBox.options[selectBox.selectedIndex].value;
+            if (selectedValue) {
+                window.location.href = selectedValue;
+            }
+        }
+    </script>
+</head>
+<body>
+<div class="container">
+
+    <div class="header">
+        <div class="header_bar">
+            <div class="header_container">
+                <div class="header_logo"><img src="img/logo.png" width="51x50"> AirCare</div>
+                <div class="header_nav">
+                    <a href="#home">Home</a>
+                    <a href="Maps.html">Maps</a>
+                    <a href="Awareness.html">Awareness</a>
+                    <a href="ContactUs.html">Contact Us</a>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <div class="header_ctn" id="home">
+                <h1>Air Pollution</h1>
+            </div>
+
+            <div class="text">
+                <p><br>Air pollution is contamination of the indoor or outdoor environment by any chemical, <br> 
+                    physical or biological agent that modifies the natural characteristics of the atmosphere. </br>
+                </p>
+            </div>
+        </div>   
+    </div>
+
+    <div class="body">
+        <div class="body_back">
+            <div class="box_1">
+                <fieldset>
+                    <legend><h3>What is Air Pollution?</h3></legend>
+                    Air pollution is caused by both human activities and natural sources. Human activities include industrial processes, transportation,
+                    agriculture, residential heating and cooking, waste management, and construction. Natural sources include wildfires, volcanic activity,
+                    dust storms, biological emissions, and sea spray. Additionally, secondary pollutants like ground-level ozone form through chemical
+                    reactions in the atmosphere.
+                </fieldset>
+                <img src="img/image_10.jpg" alt="Image for box_1" class="image_box1">
+            </div>
+
+            <div class="box_2">
+                <fieldset>
+                    <legend><h3>What is the Effect of Air Pollution?</h3></legend>
+                    Air pollution can affect lung development and is implicated in the development of emphysema, asthma, and other respiratory diseases, 
+                    such as chronic obstructive pulmonary disease (COPD). Increases in asthma prevalence and severity are linked to urbanization and outdoor 
+                    air pollution.
+                    <br>
+                    <br>
+                    <br>
+                </fieldset>
+                <img src="img/image_11.jpg" alt="Image for box_2" class="image_box2">
+            </div>
+
+            <div class="tableForm">
+                <table border="1">
+                    <caption><h3>How Is Air Quality Measured?</h3></caption>
+                    <tr>
+                        <th>Air Quality Index Levels of Health Concern</th>
+                        <th>Numerical Value</th>
+                        <th>Meaning</th>
+                    </tr>
+                    <tr class="good">
+                        <td>Good</td>
+                        <td>0 to 50</td>
+                        <td>Air quality is considered satisfactory, and air pollution poses little or no risk.</td>
+                    </tr>
+                    <tr class="moderate">
+                        <td>Moderate</td>
+                        <td>51 to 100</td>
+                        <td>Air quality is acceptable; however, for some pollutants there may be a moderate 
+                            health concern for a very small number of people who are unusually sensitive to air pollution.</td>
+                    </tr>
+                    <tr class="sensitive">
+                        <td>Unhealthy for Sensitive Groups</td>
+                        <td>101 to 150</td>
+                        <td>Members of sensitive groups may experience health effects. The general public is
+                            not likely to be affected.</td>
+                    </tr>
+                    <tr class="unhealthy">
+                        <td>Unhealthy</td>
+                        <td>151 to 200</td>
+                        <td>Everyone may begin to experience health effects; members of sensitive group may 
+                            experience more serious health effects.</td>
+                    </tr>
+                    <tr class="very-unhealthy">
+                        <td>Very Unhealthy</td>
+                        <td>201 to 300</td>
+                        <td>Health alert: everyone may experience more serious health effects.</td>
+                    </tr>
+                    <tr class="hazardous">
+                        <td>Hazardous</td>
+                        <td>301 to 500</td>
+                        <td>Health warnings of emergency conditions. The entire population is more
+                            likely to be affected.</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="body2">
+        <div class="title">
+            <p style="font-size:40pt; color:white; font-weight:bold; text-align:center;">Air Quality in Malaysia</p>
+        </div>
+
+        <div class="tables-container">
+            <table class="aqi-table worst">
+                <caption style="font-weight:bold; color:white; text-decoration:underline; font-size:20pt;">Malaysia cities with the worst air quality</caption>
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>AQI</th>
+                        <th>City</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr onclick="location.href='https://aqicn.org/station/@50230/';">
+                        <td>1</td>
+                        <td class="aqi-level" style="background-color: #ff0000; color:black;">104</td>
+                        <td style="color:white;">Putra Heights</td>
+                    </tr>
+                    <tr onclick="location.href='https://aqicn.org/city/malaysia/kedah/alor-setar/';">
+                        <td>2</td>
+                        <td class="aqi-level" style="background-color: #ff8000; color:black;">96</td>
+                        <td>Alor Setar</td>
+                    </tr>
+                    <tr onclick="location.href='https://aqicn.org/city/malaysia/selangor/banting/';">
+                        <td>3</td>
+                        <td class="aqi-level" style="background-color: #ff8000; color:black;">92</td>
+                        <td>Petaling Jaya</td>
+                    </tr>
+                    <tr onclick="location.href='https://aqicn.org/city/malaysia/melaka/bukit-rambai/';">
+                        <td>4</td>
+                        <td class="aqi-level" style="background-color: #ffff00; color:black;">77</td>
+                        <td>Bukit Rambai</td>
+                    </tr>
+                    <tr onclick="location.href='https://aqicn.org/city/malaysia/negeri-sembilan/nilai/';">
+                        <td>5</td>
+                        <td class="aqi-level" style="background-color: #ffff00; color:black;">75</td>
+                        <td>Kampung Baharu Nilai</td>
+                    </tr>
+                    <tr onclick="location.href='https://aqicn.org/city/malaysia/perak/kg.-air-putih--taiping/';">
+                        <td>6</td>
+                        <td class="aqi-level" style="background-color: #ffff00; color:black;">73</td>
+                        <td>Simpang Empat</td>
+                    </tr>
+                    <tr onclick="location.href='https://aqicn.org/city/malaysia/kelantan/kota-bharu/';">
+                        <td>7</td>
+                        <td class="aqi-level" style="background-color: #ffff00; color:black;">73</td>
+                        <td>Kota Bharu</td>
+                    </tr>
+                    <tr onclick="location.href='https://aqicn.org/city/malaysia/kelantan/tanah-merah/';">
+                        <td>8</td>
+                        <td class="aqi-level" style="background-color: #ffff00; color:black;">72</td>
+                        <td>Tanah Merah</td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="aqi-table best">
+                <caption style="font-weight:bold; color:white; text-decoration:underline; font-size:20pt;">Malaysia cities with the best air quality</caption>
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>AQI</th>
+                        <th>City</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr onclick="location.href='https://aqicn.org/station/@469237/';">
+                        <td>1</td>
+                        <td class="aqi-level" style="background-color: #808080; color:black;">-</td>
+                        <td>Klang</td>
+                    </tr>
+                    <tr onclick="location.href='https://aqicn.org/city/malaysia/johor/muar/';">
+                        <td>2</td>
+                        <td class="aqi-level" style="background-color: #808080; color:black;">-</td>
+                        <td>Muar</td>
+                    </tr>
+                    <tr onclick="location.href='https://aqicn.org/city/malaysia/pulau-pinang/usm/';">
+                        <td>3</td>
+                        <td class="aqi-level" style="background-color: #808080; color:black;">-</td>
+                        <td>Kampung Sungai Ara</td>
+                    </tr>
+                    <tr onclick="location.href='https://aqicn.org/city/malaysia/sarawak/sri-aman/';">
+                        <td>4</td>
+                        <td class="aqi-level" style="background-color: #00ff00; color:black;">21</td>
+                        <td>Simanggang</td>
+                    </tr>
+                    <tr onclick="location.href='https://aqicn.org/city/malaysia/sarawak/sarikei/';">
+                        <td>5</td>
+                        <td class="aqi-level" style="background-color: #00ff00; color:black;">28</td>
+                        <td>Sarikei</td>
+                    </tr>
+                    <tr onclick="location.href='https://aqicn.org/city/malaysia/sarawak/kapit/';">
+                        <td>6</td>
+                        <td class="aqi-level" style="background-color: #00ff00; color:black;">35</td>
+                        <td>Kapit</td>
+                    </tr>
+                    <tr onclick="location.href='https://aqicn.org/city/malaysia/sabah/kota-kinabalu/';">
+                        <td>7</td>
+                        <td class="aqi-level" style="background-color: #00ff00; color:black;">37</td>
+                        <td>Putatan</td>
+                    </tr>
+                    <tr onclick="location.href='https://aqicn.org/city/malaysia/sarawak/sibu/';">
+                        <td>8</td>
+                        <td class="aqi-level" style="background-color: #00ff00; color:black;">42</td>
+                        <td>Sibu</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="body4">
+        <div class="body4_image">
+            <img src="img/image_17.jpg" width="700px" height="800px">
+        </div>
+
+        <div class="body4_title">
+            <h1 style="font-size:50px; text-decoration:underline;">Air Quality in Malaysia State</h1>
+            <br>
+            <!-- <h1 style="text-align:center;">Select the state you want to know: </h1> -->
+            <p style="text-align:justify; color:white; font-size:20px;">
+                As of June 2024, the air quality across Malaysia varies significantly by state. 
+                Most states are experiencing "Good" to "Moderate" air quality levels, with the 
+                Air Pollutant Index (API) remaining below 100 in many regions. Kuala Lumpur, for 
+                instance, maintains a "Good" air quality level with an API around 39. However, 
+                periodic haze from agricultural burning practices in Indonesia can elevate pollution 
+                levels, particularly in Peninsular Malaysia, causing temporary spikes in air quality indices.
+            </p>
+        </div>
+
+        <div class="selector-container">
+            <label for="stateSelector">Select a State to check the Air Quality:</label>
+            <select id="stateSelector" onchange="navigateToWebsite()">
+                <option value="">--Select--</option>
+                <option value="https://www.iqair.com/malaysia/sabah">Sabah</option>
+                <option value="https://www.iqair.com/malaysia/kedah">Kedah</option>
+                <option value="https://www.iqair.com/malaysia/johor">Johor</option>
+                <option value="https://www.iqair.com/malaysia/perlis">Perlis</option>
+                <option value="https://www.iqair.com/malaysia/melaka">Malacca</option>
+                <option value="https://www.iqair.com/malaysia/sarawak">Sarawak</option>
+                <option value="https://www.iqair.com/malaysia/perak">Perak</option>
+                <option value="https://www.iqair.com/malaysia/terengganu">Terengganu</option>
+                <option value="https://www.iqair.com/malaysia/selangor">Selangor</option>
+                <option value="https://www.iqair.com/malaysia/negeri-sembilan">Negeri Sembilan</option>
+                <option value="https://www.iqair.com/malaysia/kelantan">Kelantan</option>
+                <option value="https://www.iqair.com/malaysia/pahang">Pahang</option>
+                <option value="https://www.iqair.com/malaysia/penang">Penang</option>
+            </select>
+        </div>
+
+    </div>
+
+    <div class="body3">
+        <h1>Effect of Air Pollution</h1>
+        <a href="https://www.sciencedaily.com/news/earth_climate/air_pollution/" target="_blank">
+            <img src="img/image_9.jpg" width="750" height="400" alt="Clickable Image">
+            
+        </a>
+        <div class="text-box">
+            Click the image to read the newest news of Air Pollution.
+        </div>
+
+        <div class="text1">
+            <ul>
+                <li style="font-weight:bold; font-size:25px;">Effect on Human</li>
+                <ul>
+                    <li style="text-align: justify; font-size:20px; width:600px;">
+                        People experience a wide range of health effects from being exposed to air
+                        pollution. Effects can be broken down into short-term effects and long-term
+                        effects. Short-term effects, which are temporary, include illnesses such as
+                        pneumonia or bronchitis. They also include discomfort such as irritation to
+                        the nose, throat, eyes, or skin. Air pollution can also cause headaches, 
+                        dizziness, and nausea. Bad smells made by factories, garbage, or sewer
+                        systems are considered air pollution, too. These odors are less serious but
+                        still unpleasant.
+                    </li>
+                    <br>
+                    <li style="text-align: justify; font-size:20px; width:600px;">
+                        Long-term effects of air pollution can last for years or for an entire lifetime. 
+                        They can even lead to a person's death. Long-term health effects from air pollution 
+                        include heart disease, lung cancer, and respiratory diseases such as emphysema. 
+                        Air pollution can also cause long-term damage to people's nerves, brain, kidneys, 
+                        liver, and other organs. Some scientists suspect air pollutants cause birth defects. 
+                        Nearly 2.5 million people die worldwide each year from the effects of outdoor or indoor 
+                        air pollution.
+                    </li>
+                </ul>
+            </ul>
+        </div>
+
+        <div class="text2">
+            <ul>
+                <li style="font-weight:bold; font-size:25px;">Effect on Environment</li>
+                <ul>
+                    <li style="text-align: justify; font-size:20px; width:1400px;">
+                        Like people, animals, and plants, entire ecosystems can suffer effects from air pollution. 
+                        Haze, like smog, is a visible type of air pollution that obscures shapes and colors. Hazy air 
+                        pollution can even muffle sounds. Air pollution particles eventually fall back to Earth. Air 
+                        pollution can directly contaminate the surface of bodies of water and soil. This can kill crops 
+                        or reduce their yield. It can kill young trees and other plants.
+                    </li>
+                    <br>
+                    <li style="text-align: justify; font-size:20px; width:1400px;">
+                        Global warming is an environmental phenomenon caused by natural and anthropogenic air pollution. 
+                        It refers to rising air and ocean temperatures around the world. This temperature rise is at least 
+                        partially caused by an increase in the amount of greenhouse gases in the atmosphere. Greenhouse gases 
+                        trap heat energy in the Earths atmosphere. (Usually, more of Earths heat escapes into space.) Carbon 
+                        dioxide is a greenhouse gas that has had the biggest effect on global warming. Carbon dioxide is emitted 
+                        into the atmosphere by burning fossil fuels (coal, gasoline, and natural gas). Humans have come to rely 
+                        on fossil fuels to power cars and planes, heat homes, and run factories. Doing these things pollutes the 
+                        air with carbon dioxide.
+                    </li>
+                </ul>
+            </ul>
+        </div>
+
+    </div>
+
+    <!-- Footer Section -->
+    <div class="footer">
+        <div class="footer_content">
+            <p style="font-size: 16pt; color: white; font-weight: bold; text-align: center;">&copy; 2024 Cheng Yu Xian</p>
+            <div class="footer_nav">
+                <a href="Index.html" style="color: white; text-decoration: none; font-size: 14pt; padding: 10px;">Back to Top</a>
+                <a href="Maps.html" style="color: white; text-decoration: none; font-size: 14pt; padding: 10px;">Maps</a>
+                <a href="Awareness.html" style="color: white; text-decoration: none; font-size: 14pt; padding: 10px;">Awareness</a>
+                <a href="ContactUs.html" style="color: white; text-decoration: none; font-size: 14pt; padding: 10px;">Contact Us</a>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Contact Us</title>
+        <link href="style4.css" rel="stylesheet" type="text/css">
+
+        <!-- Script for form: succesfully send message -->
+        <script>
+            function handleSubmit(event) {
+                event.preventDefault();
+                const email = document.getElementById('email').value;
+                const successMessage = document.getElementById('success-message');
+                const errorMessage = document.getElementById('error-message');
+                
+                // Reset messages
+                successMessage.style.display = 'none';
+                errorMessage.style.display = 'none';
+    
+                // Validate email format
+                const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailPattern.test(email)) {
+                    errorMessage.style.display = 'block';
+                    return;
+                }
+    
+                // If email is valid, show success message
+                successMessage.style.display = 'block';
+                // Optionally, reset the form
+                event.target.reset();
+            }
+        </script>
+    </head>
+
+    <body>
+        <div class="header">
+            <div class="header_bar">
+                <div class="header_container">
+                    <div class="header_logo"><img src="img/logo.png" width="51x50"> AirCare</div>
+                    <div class="header_nav">
+                    <a href="Index.html">Home</a>
+                    <a href="Maps.html">Maps</a>
+                    <a href="Awareness.html">Awareness</a>
+                    <a href="ContactUs.html">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="header_body">
+                <img src="img/image_15.jpg" height="700px;">
+            </div>
+
+            <div class="body">
+                <form class="comment-form" action="comment_form.php" method="post" onsubmit="handleSubmit(event)">
+                    <h2>Leave a Comment</h2>
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                    
+                    <label>Gender</label>
+                    <div class="gender">
+                        <label><input type="radio" name="gender" value="male" required> Male</input></label>
+                        <label><input type="radio" name="gender" value="female" required> Female</input></label>
+                    </div>
+                    
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                    
+                    <label for="phone">Telephone No</label>
+                    <input type="tel" id="phone" name="phone" required>
+                    
+                    <label for="comment">Comment</label>
+                    <textarea id="comment" name="comment" rows="4" required></textarea>
+                    
+                    <div class="buttons">
+                        <button type="submit">Send</button>
+                        <button type="reset">Clear</button>
+                    </div>
+                </form>
+                <div class="success-message" id="success-message">Successfully sent!</div>
+                <div id="error-message" class="message error-message">Failed to send due to incorrect email format</div>
+            </div>
+        </div>
+
+    <!-- Footer -->
+        <div class="footer">
+            <div class="footer_content">
+                <p style="font-size: 16pt; color: white; font-weight: bold; text-align: center;">&copy; 2024 Cheng Yu Xian</p>
+                <br>
+                <div class="footer_nav">
+                    <a href="ContactUs.html" style="color: white; text-decoration: none; font-size: 14pt; padding: 10px;">Back to Top</a>
+                    <a href="Index.html" style="color: white; text-decoration: none; font-size: 14pt; padding: 10px;">Home</a>
+                    <a href="Maps.html" style="color: white; text-decoration: none; font-size: 14pt; padding: 10px;">Maps</a>
+                    <a href="Awareness.html" style="color: white; text-decoration: none; font-size: 14pt; padding: 10px;">Awareness</a>
+                    <br>
+                    <br>
+                    <p style="color:white; font-family:Arial, Helvetica, sans-serif;">E-mail: chengyuxian16@gmail.com &nbsp;&nbsp;&nbsp; Tel No.: +60 1120260121</p>
+                    <!-- <em style="color:white;">Tel No.: +60 1120260121</em> -->
+                </div>
+            </div>
+        </div>
+        
+    </body>
+</html>
